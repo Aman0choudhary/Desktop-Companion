@@ -2,7 +2,7 @@ import unittest
 from random import Random
 
 from core.state_machine import NezukoState
-from live2d.roam_engine import RoamBounds, RoamEngine
+from rendering.roam_engine import RoamBounds, RoamEngine
 
 
 class RoamEngineTests(unittest.TestCase):

@@ -72,6 +72,14 @@ class RoamEngine:
             self._move_toward(work_target, dt, speed_multiplier=0.9)
             return self._pose()
 
+        if state == NezukoState.HYPE:
+            hype_target = (
+                max(self.bounds.margin, (self.bounds.width - self.sprite_width) / 2.0),
+                max(self.bounds.margin, self.bounds.height * 0.38),
+            )
+            self._move_toward(hype_target, dt, speed_multiplier=1.2)
+            return self._pose()
+
         if self.wait_seconds > 0.0:
             self.wait_seconds = max(0.0, self.wait_seconds - dt)
             return self._pose()

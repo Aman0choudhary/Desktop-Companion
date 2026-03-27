@@ -10,5 +10,8 @@ env/
 .pytest_cache/
 .mypy_cache/
 
+assets/settings.json
+assets/voice/whisper_models/
+
 .DS_Store
 Thumbs.db

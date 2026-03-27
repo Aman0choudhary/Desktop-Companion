@@ -23,6 +23,8 @@ class AnimationController:
             return AnimationFrame(bob_offset=bob, eye_open=True, mood_label="greeting", accent_color="#ff8fb1")
         if state == NezukoState.WORK:
             return AnimationFrame(bob_offset=bob / 2.0, eye_open=True, mood_label="work", accent_color="#ffd166")
+        if state == NezukoState.HYPE:
+            return AnimationFrame(bob_offset=sin(now * 7.0) * 10.0, eye_open=True, mood_label="hype", accent_color="#ffb703")
         if state == NezukoState.SLEEPING:
             return AnimationFrame(bob_offset=1.0, eye_open=False, mood_label="sleep", accent_color="#9bb1ff")
         if state == NezukoState.DND:
